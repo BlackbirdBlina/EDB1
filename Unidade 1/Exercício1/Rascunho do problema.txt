@@ -1,0 +1,24 @@
+Fazer um programa que recebe um número e retorne a soma dele com seus antecessores até chegar em zero.
+
+int soma(int n);
+
+soma(4) = 4 + (4-1) + (4-2) + (4-3) + (4-4) = 10
+        = 4 + 3 + 2 + 1 + 0 = 10
+
+soma(3) = 3 + 2 + 1 + 0
+
+soma(2) = 2 + 1 + 0
+
+soma(1) = 1 + 0
+
+soma(0) = 0
+
+soma(4) = 4 + soma(3)
+
+soma(3) = 3 + soma(2)
+
+soma(2) = 2 + soma(1)
+
+soma(1) = 1 + soma(0)
+
+soma(n) = n + soma(n-1)
