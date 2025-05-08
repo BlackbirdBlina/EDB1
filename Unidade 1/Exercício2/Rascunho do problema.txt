@@ -1,0 +1,15 @@
+Fazer um programa que recebe um número e imprime todos os seus antecessores até chegar em zero.
+
+void imprimir(int n);
+
+imprimir(4) = 4 3 2 1 0
+
+imprimir(3) = 3 2 1 0
+
+imprimir(2) = 2 1 0
+
+imprimir(1) = 1 0
+
+imprimir(0) = 0 (caso base), está presente em todos
+
+imprimir(4) = "4 \n" imprimir(4-1)

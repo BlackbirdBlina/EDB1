@@ -11,7 +11,7 @@ soma(2) = 2 + 1 + 0
 
 soma(1) = 1 + 0
 
-soma(0) = 0
+soma(0) = 0 (caso base), está presente em todos
 
 soma(4) = 4 + soma(3)
 
