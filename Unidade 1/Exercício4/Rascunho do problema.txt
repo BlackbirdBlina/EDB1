@@ -1,0 +1,52 @@
+controle = 0
+banana, 'a'
+
+1ª
+    b == a -> false
+    chama função + 1
+2ª
+    a == a -> true
+    controle = controle + 1
+    chama função + 1
+3ª
+    n == a -> false
+    chama função + 1
+4ª
+    a == a -> true
+    controle = controle + 1
+    chama função + 1
+5ª
+    n == a -> false
+    chama função + 1
+6ª
+    a == a -> true
+    controle = controle + 1
+    chama função + 1
+7ª
+    "" == a -> false
+    break
+
+
+"banana" 'a' = 'b'=='a' ??????????
+"anana" 'a' = ??????
+....
+
+
+"ab" 'a' = 1 + "b" 'a'
+"b" 'a' = 0 + "" 'a'
+"" 'a' = 0
+
+"a" 'a' = 1 + 0
+"" 'a' = 0
+
+
+string palavra = "banana";
+palavra[0] ==
+palavra
+
+
+"hello"
+substr(1,5)
+
+"ello"
+substr(1,4)
