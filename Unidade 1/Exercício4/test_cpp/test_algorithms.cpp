@@ -33,9 +33,10 @@ int main() {
     // RUN_TEST("Busca ordenada 3", busca_seq_ordenada(arr2, 11), /* esperado */ -1);
     // RUN_TEST("Busca ordenada 4", busca_seq_ordenada(arr2, 5), /* esperado */ 5);
 
-    // // Conjunto de testes para busca binária em array desordenado e ordenado
-    // RUN_TEST("Busca binaria", busca_binaria(arr1, 6), /* esperado */ 6);
-    // RUN_TEST("Busca binaria", busca_binaria(arr1,30), /* esperado */ 2);
+    // Conjunto de testes para busca binária em array desordenado e ordenado
+    RUN_TEST("Busca binaria", busca_binaria(6), /* esperado */ 4);
+    RUN_TEST("Busca binaria", busca_binaria(30), /* esperado */ 4);
+    RUN_TEST("Busca binaria", busca_binaria(5), /* esperado */ 4);
 
     // Conjunto de testes para contagem por recursão em string
     RUN_TEST("Recursiva 1", recursao("banana", 'a'), /* esperado */ 3);
