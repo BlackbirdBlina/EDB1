@@ -1,3 +1,42 @@
+Questão sobre a primeira versão defeituosa
+
+Objetivos
+Assinatura da função de versão: bool isBadVersion(int version);
+Assinatura da função de busca: int busca_binaria(int n);
+Utilizar busca binária: Construir um algoritmo de busca que vá dividindo a "lista de dados" em pedaços menores
+Buscar pela primeira versão defeituosa!
+
+Exemplo para tentar ilustrar e entender o problema:
+
+Se o número n de versões for 5 e a versão com defeito é a 3, então teremos que:
+
+Chamar a função de verificação (isBadVersion) até encontrar o que se deseja
+
+Condição:
+    Enquanto o início = 1 for <= ao final = 5 1ª(2)
+    MEIO = (início + final) por 2 // 1ª(1 + 5)/2 = 3; 2ª(1 + 2)/2 = 1 --descarta a parte quebrada; 3ª(2 + 2)/2 = 2;
+    verifica se passando o MEIO 1ª(3) 2ª(1) 3ª(2) para a isBadVersion retorna TRUE:
+        1ª(3 é >= 3? -> sim, vai retornar TRUE); 2ª(1 é >= 3? -> não, vai retornar FALSE); 3ª(2 é >= 3? -> não, vai retornar FALSE);
+
+        Se retornar TRUE, então significa que a versão passada é defeituosa. Logo as versões que são posteriores também estão com defeito.
+        Portanto, deve-se descartar tudo o que estiver DEPOIS do MEIO(3).
+        Então, precisa definir um novo "final", logo teremos que o novo final será o meio - 1 1ª(3 - 1 = 2).
+
+        Se retornar FALSE, então significa a versão passada não é defeituosa. Logo é necessário verificar a posterior àquela versão.
+        Portanto, deve-se descartar tudo o que estiver ANTES do MEIO 2ª(1), 3ª(2),.
+        Então, precisa definir um novo "início", logo teremos que o novo início será o meio + 1 2ª(1 + 1 = 2) 3ª(2 + 1 = 3).
+
+        Ao chegar na quarta rodada o início será maior que o final, então deve retornar o último início armazenado como sendo a primeira versão defeituosa.
+
+    início  --- final  ---  meio
+1ª     1           5           3
+2ª     1           2           1
+3ª     2           2           2
+4ª     3           2          Fim
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Questão sobre recursão em string
 controle = 0
 banana, 'a'
 
