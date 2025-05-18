@@ -1,6 +1,6 @@
 #include "busca_binaria.hpp"
 
-int busca_binaria(int n) {
+int busca_binaria(int n){
     int inicio = 1;
     int final = n;
     while (inicio <= final){
@@ -16,7 +16,7 @@ int busca_binaria(int n) {
 }
 
 
-bool isBadVersion(int version) {
+bool isBadVersion(int version){
     int bad = 4;
     return version >= bad;
 }
