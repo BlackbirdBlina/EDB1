@@ -1,7 +1,7 @@
 #include "recursao.hpp"
 #include <string>
 
-int recursao(const string &str, char alvo) {
+int recursao(const string &str, char alvo){
     if(str.length() == 0){
         return 0;
     }
