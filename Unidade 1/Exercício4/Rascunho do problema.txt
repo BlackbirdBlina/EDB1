@@ -36,6 +36,17 @@ Condição:
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Questão sobre equipes iguais e diversas
+
+Função de ordenação void ordenar(int vetor[], int tamanho) - iterar verificando o tamanho de cada dado/informação presente em cada posição do vetor
+EX.:
+    Se a informação/dado/número na posição vetor[1] for menor que a informação atual vetor[0] então, move o dado da posição 1 para a posição 0. Caso contrário,
+    mantém os dados nas mesmas posições e segue para a próxima verificação.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Questão sobre recursão em string
 controle = 0
 banana, 'a'
