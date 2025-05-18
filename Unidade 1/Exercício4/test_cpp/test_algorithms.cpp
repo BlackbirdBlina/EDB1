@@ -21,19 +21,35 @@ int main() {
     //Tamanho do vetor <ALTERAR>
     int n1 = 10;
     //Vetor ordenado <POPULAR>
-    vector<int> arr2 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    vector<int> arr2 = {1, 2, 3, 2, 3, 1, 2, 3, 1, 2};
+
+    //Usando funções para testes específicos (visualizar se os vetores estão sendo ordenados corretamente)
+    //exibir_vetor(vetor,10);
+    //ordenar(vetor,10);
+    //exibir_vetor(vetor,10);
+
     //Tamanho do vetor <ALTERAR>
     int n2 = 10;
 
-    //Eexemplo de chamada da macro RUN_TEST
+    //Exemplo de chamada da macro RUN_TEST
     //RUN_TEST("Titulo do teste", nome_da_funcao(entradas das funcao), resposta_esperada);
-    // Conjunto de testes para busca sequencial em array desordenado e ordenado
-    // RUN_TEST("Busca ordenada 1", busca_seq_ordenada(arr1, 30), /* esperado */ -1);
-    // RUN_TEST("Busca ordenada 2", busca_seq_ordenada(arr1, 2), /* esperado */ 7);
-    // RUN_TEST("Busca ordenada 3", busca_seq_ordenada(arr2, 11), /* esperado */ -1);
-    // RUN_TEST("Busca ordenada 4", busca_seq_ordenada(arr2, 5), /* esperado */ 5);
+    // Conjunto de testes para busca sequencial em array desordenado, antes de ordenar
+    RUN_TEST("Busca ordenada 1", busca_seq_ordenada(arr1, n1, 30), /* esperado */ -1);
+    RUN_TEST("Busca ordenada 2", busca_seq_ordenada(arr1, n1, 2), /* esperado */ 7);
+    RUN_TEST("Busca ordenada 3", busca_seq_ordenada(arr2, n2, 11), /* esperado */ -1);
+    RUN_TEST("Busca ordenada 4", busca_seq_ordenada(arr2, n2, 3), /* esperado */ 2);
 
-    // Conjunto de testes para busca binária em array desordenado e ordenado
+    // Chamando a função que evita contagem de número repetido e que usa a função de ordenação
+    RUN_TEST("Conta Especialidades Distintas 1", conta_especialidades_distintas(arr1, 10), /* esperado */ 10);
+    RUN_TEST("Conta Especialidades Distintas 2", conta_especialidades_distintas(arr2, 10), /* esperado */ 3);
+
+    // Conjunto de testes para busca sequencial em array ordenado, após o uso da função de ordenação
+    RUN_TEST("Busca ordenada 1", busca_seq_ordenada(arr1, n1, 30), /* esperado */ -1);
+    RUN_TEST("Busca ordenada 2", busca_seq_ordenada(arr1, n1, 2), /* esperado */ 2);
+    RUN_TEST("Busca ordenada 3", busca_seq_ordenada(arr2, n2, 11), /* esperado */ -1);
+    RUN_TEST("Busca ordenada 4", busca_seq_ordenada(arr2, n2, 3), /* esperado */ 7);
+
+    // Conjunto de testes para busca binária em array ordenado
     RUN_TEST("Busca binaria", busca_binaria(6), /* esperado */ 4);
     RUN_TEST("Busca binaria", busca_binaria(30), /* esperado */ 4);
     RUN_TEST("Busca binaria", busca_binaria(5), /* esperado */ 4);
