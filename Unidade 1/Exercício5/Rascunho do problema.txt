@@ -1,0 +1,2 @@
+Fazer um código usando os algoritmos de busca binária e sequencial para comparar o tempo de busca gasto para tamanho de vetores entre 1000 a 100000.
+Usar o timepoint do high_resolution_clock para capturar o tempo gasto.

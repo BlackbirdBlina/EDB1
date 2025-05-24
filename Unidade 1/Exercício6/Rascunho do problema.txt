@@ -1,0 +1,8 @@
+Fazer um código para multiplicar 2 números de modo recursivo usando apenas soma.
+
+int multi(int a, int b);
+
+multi(2, 3) = 2 + 2 + 2 + 0 = 6
+multi(2, 2) = 2 + 2 + 0 = 4
+multi(2, 1) = 2 + 0 = 2
+multi(2, 0) = 0 = 0 (zero é o caso base, está presente em todos)
