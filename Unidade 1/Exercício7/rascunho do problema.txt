@@ -1,0 +1,25 @@
+Fazer um algoritmo que realize divisão através de subtrações sucessivas de forma recursiva
+
+int div(int a, int b);
+
+exemplo
+                     INDO            VOLTANDO
+div(6, 2) =     1 + div(4, 2)   =   1 + 1 + 1 + 0
+div(4, 2) =     1 + div(2, 2)   =   1 + 1 + 0
+div(2, 2) =     1 + div(0, 2)   =   1 + 0
+div(0, 2) =     0
+
+
+div(6, 2) = 1 + (1 + div(2, 2)) - Substitui voltando.
+
+
+div(8, 4) = 1 + div(4, 4) = 1 + 1 + 0
+div(4, 4) = 1 + div(0, 4) = 1 + 0
+div(0, 4) = 0
+
+div(10,4) = [ div(6,4) ]
+
+
+div(6,4) = [ div(2,4) ]
+
+div(2,4) = Divisão(0,2)
