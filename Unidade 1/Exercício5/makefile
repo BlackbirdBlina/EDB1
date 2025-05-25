@@ -20,7 +20,7 @@ main.o: main.cpp
 
 	$(CC) $(CPPFLAGS) -c main.cpp
 
-imprimir.o: desempenho.hpp desempenho.cpp
+desempenho.o: desempenho.hpp desempenho.cpp
 
 	$(CC) $(CPPFLAGS) -c desempenho.cpp
 

@@ -20,7 +20,7 @@ main.o: main.cpp
 
 	$(CC) $(CPPFLAGS) -c main.cpp
 
-imprimir.o: div.hpp div.cpp
+div.o: div.hpp div.cpp
 
 	$(CC) $(CPPFLAGS) -c div.cpp
 

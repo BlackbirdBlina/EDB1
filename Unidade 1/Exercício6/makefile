@@ -20,7 +20,7 @@ main.o: main.cpp
 
 	$(CC) $(CPPFLAGS) -c main.cpp
 
-imprimir.o: multi.hpp multi.cpp
+multi.o: multi.hpp multi.cpp
 
 	$(CC) $(CPPFLAGS) -c multi.cpp
 
