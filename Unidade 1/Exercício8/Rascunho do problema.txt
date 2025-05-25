@@ -1,0 +1,14 @@
+Objetivos:
+
+Dado um vetor de N inteiros representando anos misturados, crie uma função que:
+    1. Ordene esse vetor em ordem decrescente;
+    2. Use uma busca sequencial e binária para encontrar o primeiro ano bissexto posterior ao ano de nascimento
+    informado.
+
+● Um ano bissexto é divisível por 4, mas não por 100, exceto se for divisível por 400.
+● Retorne o ano bissexto encontrado ou -1 se nenhum atender ao critério.
+
+🔧 Requisitos adicionais:
+    ● A ordenação deve ser feita manualmente (sem usar funções da STL tipo sort).
+    ● A busca deve usar busca sequencial ou binária (decida qual a melhor usar e justifique).
+    ● O vetor pode conter anos repetidos.
