@@ -1,6 +1,6 @@
 # Makefile baseado nos slides apresentados pelo Professor Isaac Franco
 
-#Makefile for "EDB1 - Contagem regressiva" C++ Application
+#Makefile for "EDB1 - Calculando o tempo de busca" C++ Application
 
 #Created by Sabrina Barbosa 24/05/2025
 
