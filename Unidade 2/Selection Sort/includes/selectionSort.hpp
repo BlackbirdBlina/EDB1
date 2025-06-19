@@ -8,9 +8,9 @@ void selectionSortInc(vector<int> &v, int tamanho);
 
 void selectionSortDec(vector<int> &v, int tamanho);
 
-void selectionSortIncRec(vector<int> &v, int tamanho);
+void selectionSortIncRec(vector<int> &v, int inicio, int final);
 
-void selectionSortDecRec(vector<int> &v, int tamanho);
+void selectionSortDecRec(vector<int> &v, int inicio, int final);
 
 
 

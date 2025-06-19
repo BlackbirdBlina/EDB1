@@ -30,10 +30,35 @@ void selectionSortDec(vector<int> &v, int tamanho){
     }
 }
 
-void selectionSortIncRec(vector<int> &v, int tamanho){
-
+void selectionSortIncRec(vector<int> &v, int inicio, int final){
+    if (inicio == final){
+        return;
+    }
+    int min = inicio;
+    for (int j = inicio + 1 ; j < final; ++j){
+        if (v[j] < v[min]){
+            min = j;
+        }
+    }
+    int aux = v[inicio];
+    v[inicio] = v[min];
+    v[min] = aux;
+    selectionSortIncRec(v, inicio + 1, final);
 }
 
-void selectionSortDecRec(vector<int> &v, int tamanho){
 
+void selectionSortDecRec(vector<int> &v, int inicio, int final){
+    if (inicio == final){
+        return;
+    }
+    int max = inicio;
+    for (int j = inicio + 1 ; j < final; ++j){
+        if (v[j] > v[max]){
+            max = j;
+        }
+    }
+    int aux = v[inicio];
+    v[inicio] = v[max];
+    v[max] = aux;
+    selectionSortDecRec(v, inicio + 1, final);
 }

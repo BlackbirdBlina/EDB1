@@ -3,6 +3,15 @@
 #include "selectionSort.hpp"
 using namespace std;
 
+// Caso queira tamanho irrestrito: retirar ou (||) *Altere frase para se adequar ao contexto escolhido
+int validaTamanho(int a, string frase){
+    while(a < 1 || a > 100){
+        cout << frase << endl;
+        cin >> a;
+    }
+    return a;
+}
+
 int verificaVar(int a, string frase){
     while(a < 1 || a > 2){
         cout << frase << endl;
@@ -31,11 +40,12 @@ void escolheFuncRec(vector<int> &v, int c, int t){
     switch (c)
     {
     case 1:
-        selectionSortIncRec(v, t);
+        // Zero determina o início
+        selectionSortIncRec(v, 0, t);
         break;
 
     case 2:
-        selectionSortDecRec(v, t);
+        selectionSortDecRec(v, 0, t);
         break;
 
     default:
@@ -53,6 +63,7 @@ int main (){
     cout << "Digite um número inteiro para o tamanho para o vetor: " << endl;
     cin >> tamanho;
     cin.ignore();
+    tamanho = validaTamanho(tamanho, "Por favor digite um número maior que 0 e menor que 100.");
     // O tipo Vector aloca memória dinamicamente - otimizado
     vetor.reserve(tamanho);
     cout << "Digite " << tamanho << " número(s) para preencher o vetor: " << endl;
