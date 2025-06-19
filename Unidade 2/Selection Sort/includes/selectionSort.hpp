@@ -1,0 +1,17 @@
+#ifndef selectionSort_hpp
+#define selectionSorte_hpp
+#include <vector>
+using namespace std;
+
+
+void selectionSortInc(vector<int> &v, int tamanho);
+
+void selectionSortDec(vector<int> &v, int tamanho);
+
+void selectionSortIncRec(vector<int> &v, int tamanho);
+
+void selectionSortDecRec(vector<int> &v, int tamanho);
+
+
+
+#endif
