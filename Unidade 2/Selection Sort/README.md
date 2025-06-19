@@ -17,4 +17,4 @@ Apesar da simplicidade, esse algoritmo tem uma aplicação bastante importante:
     É o método de escolha para ordenar arquivos com registros muito grandes, porém com chaves pequenas.
 
 ### Fonte
-*SEDGEWICK, Robert. AlgoritHms. Addison-Wesley Publishing Company, 2010. Cap. 8*
+*SEDGEWICK, Robert. Algorithms. Addison-Wesley Publishing Company, 2010. Cap. 8*
