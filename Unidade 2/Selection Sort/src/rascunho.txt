@@ -109,7 +109,12 @@ problema de tamanho 2 > {-1, 0, 2, 3, 9|, 15, 10}
 problema de tamanho 1 > {-1, 0, 2, 3, 9, 10|, 15}
 problema de tamanho 0 > {-1, 0, 2, 3, 9, 10, 15|} (opcional)
 
-função controleRec(vetor, inicio, final){
+função controleRec(vetor, inicio_img, final){
+
+    if (inicio_img == final_real){
+        return;
+    }
+
     int min = inicio;
     for (int j = inicio + 1 ; j < final; ++j){
         if (v[j] < v[min]){
