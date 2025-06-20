@@ -1,0 +1,172 @@
+
+Insertion Sort
+
+Funciona de modo que busca o lugar adequado para cada valor do vetor.
+"Abre-se" um espaço no vetor onde o valor em questão precisa ser inserido, movendo os elementos maiores uma posição à direita.
+Não realiza troca de fato. Apenas desloca as posições.
+2 tipos de comparação (par a par):
+Compara "indo" até encontrar o primeiro maior valor (relativo).
+Compara "voltando" até saber onde precisa parar e colocar o menor valor (relativo).
+
+Exemplo:
+v = {10, 15, 0, 2, -1, 3, 9}
+
+Analisando o vetor v com base no insertion sort:
+*Comparação "indo":
+    Toma o valor da primeira posição como já ordenado
+    Compara com o valor da segunda posição: "10 > 15? -> não -> está ordenado".
+    Avança posições.
+    Compara o valor da segunda posição com o da terceira posição: "15 > 0? -> sim":
+        -> salva o 0 numa variável auxiliar.
+        -> coloca o 15 onde o 0 está.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {10, _, 15, 2, -1, 3, 9}
+*Comparação "voltando":
+    Compara o 0 com o valor da primeira posição: "10 > 0? -> sim":
+        -> coloca o 10 onde o 15 estava.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {_, 10, 15, 2, -1, 3, 9}
+*Comparação "voltando":
+    ----Não tem mais com o que comparar----
+    -> coloca o 0 onde o 10 estava.
+    Avança posições.
+
+O vetor agora tem a seguinte configuração:
+v = {0, 10, 15, 2, -1, 3, 9}
+*Comparação "indo":
+    Compara o valor da terceira posição com o da quarta posição: "15 > 2? -> sim":
+        -> salva o 2 numa variável auxiliar.
+        -> coloca o 15 onde o 2 está.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {0, 10, _, 15, -1, 3, 9}
+*Comparação "voltando":
+    Compara o 2 com o valor da segunda posição: "10 > 2? -> sim":
+        -> coloca o 10 onde o 15 estava.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {0, _, 10, 15, -1, 3, 9}
+*Comparação "voltando":
+    Compara o 2 com o valor da primeira posição: "0 > 2? -> não":
+        -> coloca o 2 onde o 10 estava.
+        Avança posições.
+
+O vetor agora tem a seguinte configuração:
+v = {0, 2, 10, 15, -1, 3, 9}
+*Comparação "indo":
+    Compara o valor da quarta posição com o da quinta posição: "15 > -1? -> sim":
+        -> salva o -1 numa variável auxiliar.
+        -> coloca o 15 onde o -1 está.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {0, 2, 10, _, 15, 3, 9}
+*Comparação "voltando":
+    Compara o -1 com o valor da terceira posição: "10 > -1? -> sim":
+        -> coloca o 10 onde o 15 estava.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {0, 2, _, 10, 15, 3, 9}
+*Comparação "voltando":
+    Compara o -1 com o valor da segunda posição: "2 > -1? -> sim":
+        -> coloca o 2 onde o 10 estava.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {0, _, 2, 10, 15, 3, 9}
+*Comparação "voltando":
+    Compara o -1 com o valor da primeira posição: "0 > -1? -> não":
+        -> coloca o 0 onde o 2 estava.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {_, 0, 2, 10, 15, 3, 9}
+*Comparação "voltando":
+    ----Não tem mais com o que comparar----
+    -> coloca o -1 onde o 0 estava.
+    Avança posições.
+
+O vetor agora tem a seguinte configuração:
+v = {-1, 0, 2, 10, 15, 3, 9}
+*Comparação "indo":
+    Compara o valor da quinta posição com o da sexta posição: "15 > 3? -> sim":
+        -> salva o 3 numa variável auxiliar.
+        -> coloca o 15 onde o 3 está.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {-1, 0, 2, 10, _, 15, 9}
+*Comparação "voltando":
+    Compara o 3 com o valor da quarta posição: "10 > 3? -> sim":
+        -> coloca o 10 onde o 15 estava.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {-1, 0, 2, _, 10, 15, 9}
+*Comparação "voltando":
+    Compara o 3 com o valor da terceira posição: "2 > 3? -> não":
+        -> coloca o 3 onde o 10 estava.
+        Avança posições.
+
+O vetor agora tem a seguinte configuração:
+v = {-1, 0, 2, 3, 10, 15, 9}
+*Comparação "indo":
+    Compara o valor da sexta posição com o da sétima posição: "15 > 9? -> sim":
+        -> salva o 9 numa variável auxiliar.
+        -> coloca o 15 onde o 9 está.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {-1, 0, 2, 3, 10, _, 15}
+*Comparação "voltando":
+    Compara o 9 com o valor da quinta posição: "10 > 9? -> sim":
+        -> coloca o 10 onde o 15 estava.
+        Volta uma posição
+
+O vetor agora tem a seguinte configuração:
+v = {-1, 0, 2, 3, _, 10, 15}
+*Comparação "voltando":
+    Compara o 9 com o valor da quarta posição: "3 > 9? -> não":
+        -> coloca o 9 onde o 10 estava.
+        Avança posições.
+
+O vetor agora tem a seguinte configuração:
+v = {-1, 0, 2, 3, 9, 10, 15}
+*Comparação "indo":
+    ----Não tem mais com o que comparar----
+    Finaliza algoritmo
+
+Visualizando a recursão:
+
+problema de tamanho 7 > {10|, 15, 0, 2, -1, 3, 9} *A barra indica o tamanho inicial do vetor (imaginário)
+problema de tamanho 6 > {10, 15|, 0, 2, -1, 3, 9}
+problema de tamanho 5 > {0, 10, 15|, 2, -1, 3, 9}
+problema de tamanho 4 > {0, 2, 10, 15|, -1, 3, 9}
+problema de tamanho 3 > {-1, 0, 2, 10, 15|, 3, 9}
+problema de tamanho 2 > {-1, 0, 2, 3, 10, 15|, 9}
+problema de tamanho 1 > {-1, 0, 2, 3, 9, 10, 15|}
+
+informações:
+    elemento_ordenado
+    elemento_n_ordenado
+função controleRec(vetor, tamanho_atual, tamanho_real){
+
+    caso base: tamanho_atual > tamanho_real
+    int aux = v[elemento_n_ordenado];
+
+    while(v[elemento_ordenado] > aux){
+        v[elemento_ordenado+1] = v[elemento_ordenado]
+        elemento_ordenado = elemento_ordenado - 1
+    }
+    v[elemento_ordenado + 1] = aux;
+    chama a função
+
+}
+

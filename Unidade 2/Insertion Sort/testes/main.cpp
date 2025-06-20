@@ -40,12 +40,12 @@ void escolheFuncRec(vector<int> &v, int c, int t){
     switch (c)
     {
     case 1:
-        // Zero determina o início
-        insertionSortIncRec(v, 0, t);
+        // 1 determina o tamanho do vetor inicial (imaginário)
+        insertionSortIncRec(v, 1, t);
         break;
 
     case 2:
-        insertionSortDecRec(v, 0, t);
+        insertionSortDecRec(v, 1, t);
         break;
 
     default:
