@@ -1,5 +1,5 @@
 #ifndef insertionSort_hpp
-#define insertionSorte_hpp
+#define insertionSort_hpp
 #include <vector>
 using namespace std;
 

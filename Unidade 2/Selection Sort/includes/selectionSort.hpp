@@ -1,5 +1,5 @@
 #ifndef selectionSort_hpp
-#define selectionSorte_hpp
+#define selectionSort_hpp
 #include <vector>
 using namespace std;
 
