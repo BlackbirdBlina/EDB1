@@ -11,9 +11,9 @@ void mergeSortInc(vector<int> &v, int tamanho);
 
 void mergeSortDec(vector<int> &v, int tamanho);
 
-void mergeSortIncRec(vector<int> &v, int tamanho_atual, int tamanho_real);
+void mergeSortIncRec(vector<int> &v, int left, int right);
 
-void mergeSortDecRec(vector<int> &v, int tamanho_atual, int tamanho_real);
+void mergeSortDecRec(vector<int> &v, int left, int right);
 
 
 
