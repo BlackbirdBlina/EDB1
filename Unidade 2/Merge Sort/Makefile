@@ -1,7 +1,7 @@
 # Makefile baseado nos slides apresentados pelo Professor Isaac Franco
 #Makefile for "EDB1 - Merge Sort" C++ Application
 
-#Created by Sabrina Barbosa 21/06/2025
+#Created by Sabrina Barbosa 27/06/2025
 
 PROG = programa
 
