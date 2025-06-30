@@ -35,11 +35,22 @@ void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho)
         break;
 
     case 2:
-
+        srand(static_cast<unsigned int>(time(nullptr)));
+        for (int i = 0; i < tamanho; ++i){
+            v.push_back(i);
+        }
+        for (int i = tamanho - 1; i > tamanho - (tamanho/10); --i){
+            int j = rand() % tamanho;
+            int aux = v[i];
+            v[i] = v[j];
+            v[j] = aux;
+        }
         break;
 
     case 3:
-
+        for (int i = 0; i < tamanho; ++i){
+            v.push_back(tamanho - i);
+        }
         break;
 
     default:
