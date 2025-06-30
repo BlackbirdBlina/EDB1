@@ -27,6 +27,8 @@ int verificaVar(int a, string frase){
 void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho){
     switch (tipoDistribuicao)
     {
+
+    //ALEATÓRIOS
     case 1:
         srand(static_cast<unsigned int>(time(nullptr)));
         for (int i = 0; i < tamanho; i++){
@@ -34,6 +36,7 @@ void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho)
         }
         break;
 
+    // QUASE ORDENADOS - 10% "bagunçado"
     case 2:
         srand(static_cast<unsigned int>(time(nullptr)));
         for (int i = 0; i < tamanho; ++i){
@@ -47,6 +50,7 @@ void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho)
         }
         break;
 
+    // INVERSAMENTE ORDENADOS
     case 3:
         for (int i = 0; i < tamanho; ++i){
             v.push_back(tamanho - i);
