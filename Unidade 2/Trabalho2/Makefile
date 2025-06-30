@@ -11,7 +11,7 @@ SRC = src
 INC = includes
 TEST = testes
 
-CPPFLAGS = -Iincludes -O0 -g -Wall -pedantic -std=c++17
+CPPFLAGS = -Iincludes -Ofast -Wall -pedantic -std=c++17
 
 OBJS = main.o selectionSort.o quickSort.o mergeSort.o insertionSort.o bubbleSort.o
 
@@ -42,6 +42,6 @@ insertionSort.o: $(INC)/insertionSort.hpp $(SRC)/insertionSort.cpp
 bubbleSort.o: $(INC)/bubbleSort.hpp $(SRC)/bubbleSort.cpp
 
 	$(CC) $(CPPFLAGS) -c $(SRC)/bubbleSort.cpp
-	
+
 clean:
 	rm -f $(PROG) $(OBJS)
