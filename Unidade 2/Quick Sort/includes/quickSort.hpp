@@ -1,8 +1,17 @@
 #ifndef quickSort_hpp
 #define quickSort_hpp
 #include <vector>
+#include <random>
+#include <chrono>
 using namespace std;
 
+static random_device rd;
+static minstd_rand engine(rd());
+
+struct ParIndices{
+    int inicio;
+    int fim;
+};
 
 int pivoRandom(vector<int> &v, int inicio, int final);
 

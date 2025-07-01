@@ -6,9 +6,10 @@ using namespace std;
 
 
 int pivoRandom(vector<int> &v, int inicio, int final){
-    srand(static_cast<unsigned int>(time(nullptr)));
-    int pivoAleatorio = inicio + rand() % (final - inicio + 1);
-    return pivoAleatorio;
+    uniform_int_distribution<int> dist(inicio, final);
+    int random_number = dist(engine);
+
+    return random_number;
 }
 
 int quickDividInc(vector<int> &v, int indiceFirstElemento, int indiceLastElemento){
@@ -70,11 +71,52 @@ int quickDividDec(vector<int> &v, int indiceFirstElemento, int indiceLastElement
 }
 
 void quickSortInc(vector<int> &v, int tamanho){
+    if (tamanho > 1){
+        vector<ParIndices> pilha;
 
+        // Passa mais de uma informação por vez
+        pilha.push_back(ParIndices {0, tamanho - 1});
+
+        while (pilha.size() > 0){
+            ParIndices topPilha = pilha.back();
+            pilha.pop_back();
+
+            int indicePivo = quickDividInc(v, topPilha.inicio, topPilha.fim);
+
+            if (indicePivo < topPilha.fim){
+                pilha.push_back(ParIndices {indicePivo + 1, topPilha.fim});
+            }
+
+            if (indicePivo > topPilha.inicio){
+                pilha.push_back(ParIndices {topPilha.inicio, indicePivo - 1});
+            }
+        }
+    }
 }
 
-void quickSortDec(vector<int> &v, int tamanho){
 
+void quickSortDec(vector<int> &v, int tamanho){
+        if (tamanho > 1){
+        vector<ParIndices> pilha;
+
+        // Passa mais de uma informação por vez
+        pilha.push_back(ParIndices {0, tamanho - 1});
+
+        while (pilha.size() > 0){
+            ParIndices topPilha = pilha.back();
+            pilha.pop_back();
+
+            int indicePivo = quickDividDec(v, topPilha.inicio, topPilha.fim);
+
+            if (indicePivo < topPilha.fim){
+                pilha.push_back(ParIndices {indicePivo + 1, topPilha.fim});
+            }
+
+            if (indicePivo > topPilha.inicio){
+                pilha.push_back(ParIndices {topPilha.inicio, indicePivo - 1});
+            }
+        }
+    }
 }
 
 void quickSortIncRec(vector<int> &v, int indiceFirstElemento, int indiceLastElemento){
@@ -83,7 +125,6 @@ void quickSortIncRec(vector<int> &v, int indiceFirstElemento, int indiceLastElem
         quickSortIncRec(v, indiceFirstElemento, indicePivo - 1);
         quickSortIncRec(v, indicePivo + 1, indiceLastElemento);
     }
-
 }
 
 void quickSortDecRec(vector<int> &v, int indiceFirstElemento, int indiceLastElemento){
@@ -93,3 +134,4 @@ void quickSortDecRec(vector<int> &v, int indiceFirstElemento, int indiceLastElem
         quickSortDecRec(v, indicePivo + 1, indiceLastElemento);
     }
 }
+
