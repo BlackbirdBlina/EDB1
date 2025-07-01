@@ -164,6 +164,7 @@ void timeSortRec(function<ContaComparEtrocas(vector<int> &, int, int)> func, vec
 
 
 int main (){
+
     int tamanho = 0;
     int tipoDistribuicao = 0;
     vector<int> vetor;

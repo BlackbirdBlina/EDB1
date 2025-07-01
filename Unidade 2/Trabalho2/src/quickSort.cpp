@@ -1,5 +1,5 @@
 #include <vector>
-#include <cstdlib>
+#include <random>
 #include <ctime>
 #include "quickSortMetrics.hpp"
 #include "qtdComparTroca.hpp"
@@ -7,9 +7,10 @@ using namespace std;
 
 
 int pivoRandom(vector<int> &v, int inicio, int final){
-    srand(static_cast<unsigned int>(time(nullptr)));
-    int pivoAleatorio = inicio + rand() % (final - inicio + 1);
-    return pivoAleatorio;
+    uniform_int_distribution<int> dist(inicio, final);
+    int random_number = dist(engine);
+
+    return random_number;
 }
 
 // Parâmetro de saída para capturar informações por referência, evitando a criação de novas structs
