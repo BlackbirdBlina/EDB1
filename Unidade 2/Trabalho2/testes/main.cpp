@@ -16,31 +16,68 @@
 using namespace std;
 using namespace std::chrono;
 
+// Verifica cada caractere passado
+bool isInteger(const string &s){
+    if (s.empty()){
+        return false;
+    }
+
+    size_t start = (s[0] == '-' || s[0] == '+') ? 1 : 0;
+    if (start == s.size()){
+        return false;
+    }
+
+    for (size_t i = start; i < s.size(); ++i){
+        if (!isdigit(s[i])){
+            return false;
+        }
+    }
+    return true;
+}
 
 // Atenção à arquitetura da máquina - indicar um tamanho que a máquina suporta (requer uso especial de memória)
 int validaTamanho(int a, string frase){
-    while(a < 1){
-        cout << frase << endl;
-        cin >> a;
+    cout << frase << endl;
+    string line;
+
+    while (true) {
+        // Lendo toda a linha - verifica tudo o que foi passado
+        getline(cin, line);
+        if (!isInteger(line)) {
+            cout << "Entrada inválida! Digite um número inteiro." << endl;
+            continue;
+        }
+
+        // Transforma a string como um "buffer de leitura", como um cin
+        stringstream ss(line);
+        ss >> a;
+
+        if (a < 1) {
+            cout << "Por favor digite um número inteiro maior que 0:" << endl;
+            continue;
+        }
+        break;
     }
     return a;
 }
 
 // Filtro para evitar a entrada de valores além de 1, 2 e 3 para o switch case
 int capturaVerificaValor(int a, string frase){
-    while (true) {
-        std::cout << frase << endl;
-        std::cin  >> a;
+    cout << frase << endl;
+    string line;
 
-        if (std::cin.fail()) {
-            std::cout << "Entrada inválida! Digite um número." << endl;
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+    while (true) {
+        getline(cin, line);
+        if (!isInteger(line)) {
+            cout << "Entrada inválida! Digite um número inteiro." << endl;
             continue;
         }
 
+        stringstream ss(line);
+        ss >> a;
+
         if (a < 1 || a > 3) {
-            std::cout << "Valor inválido! Por favor digite 1 para ALEATÓRIO ou 2 para QUASE ORDENADOS ou 3 para INVERSAMENTE ORDENADOS." << endl;
+            cout << "Valor inválido! Por favor digite 1 para ALEATÓRIO ou 2 para QUASE ORDENADOS ou 3 para INVERSAMENTE ORDENADOS." << endl;
             continue;
         }
         break;
@@ -127,15 +164,12 @@ void timeSortRec(function<ContaComparEtrocas(vector<int> &, int, int)> func, vec
 
 
 int main (){
-    int tamanho;
+    int tamanho = 0;
     int tipoDistribuicao = 0;
     vector<int> vetor;
     vector<int> vetorAux;
 
-    cout << "Digite um número inteiro para o tamanho para o vetor: " << endl;
-    cin >> tamanho;
-    cin.ignore();
-    tamanho = validaTamanho(tamanho, "Por favor digite um número maior que 0");
+    tamanho = validaTamanho(tamanho, "Digite um número inteiro para o tamanho do vetor: ");
     // O tipo Vector aloca memória dinamicamente - otimizado
     vetor.reserve(tamanho);
     vetorAux.reserve(tamanho);
