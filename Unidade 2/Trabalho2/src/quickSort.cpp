@@ -1,7 +1,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-#include "quickSort.hpp"
+#include "quickSortMetrics.hpp"
 #include "qtdComparTroca.hpp"
 using namespace std;
 

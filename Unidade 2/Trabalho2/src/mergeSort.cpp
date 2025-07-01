@@ -1,5 +1,5 @@
 #include <vector>
-#include "mergeSort.hpp"
+#include "mergeSortMetrics.hpp"
 #include "qtdComparTroca.hpp"
 using namespace std;
 
