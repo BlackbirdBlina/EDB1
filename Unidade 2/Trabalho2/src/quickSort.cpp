@@ -57,15 +57,15 @@ int quickDivid(vector<int> &v, int indiceFirstElemento, int indiceLastElemento, 
     return indiceInc;
 }
 
-ContaComparEtrocas quickSort(vector<int> &v, int indiceFirstElemento, int indiceLastElemento){
+ContaComparEtrocas quickSortMetrics(vector<int> &v, int indiceFirstElemento, int indiceLastElemento){
     ContaComparEtrocas contagem;
     contagem.qtdComparacoes = 0;
     contagem.qtdTrocas = 0;
 
     if (indiceFirstElemento < indiceLastElemento){
         int indicePivo = quickDivid(v, indiceFirstElemento, indiceLastElemento, contagem);
-        ContaComparEtrocas contagemEsquerda = quickSort(v, indiceFirstElemento, indicePivo - 1);
-        ContaComparEtrocas contagemDireita = quickSort(v, indicePivo + 1, indiceLastElemento);
+        ContaComparEtrocas contagemEsquerda = quickSortMetrics(v, indiceFirstElemento, indicePivo - 1);
+        ContaComparEtrocas contagemDireita = quickSortMetrics(v, indicePivo + 1, indiceLastElemento);
         contagem.qtdComparacoes += (contagemEsquerda.qtdComparacoes + contagemDireita.qtdComparacoes);
         contagem.qtdTrocas += (contagemEsquerda.qtdTrocas + contagemDireita.qtdTrocas);
     }

@@ -188,7 +188,7 @@ int main (){
     timeSortIter(bubbleSortMetrics, vetorAux, tamanho, "Bubble Sort");
 
     copiaVetor(vetor, vetorAux);
-    timeSortRec(quickSort, vetorAux, 0, tamanho - 1, "Quick Sort");
+    timeSortRec(quickSortMetrics, vetorAux, 0, tamanho - 1, "Quick Sort");
 
     copiaVetor(vetor, vetorAux);
     timeSortRec(mergeSortMetrics, vetorAux, 0, tamanho - 1, "Merge Sort");
