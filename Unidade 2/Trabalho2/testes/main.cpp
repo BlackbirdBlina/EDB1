@@ -5,11 +5,12 @@
 #include <iomanip>
 #include <functional>
 
-#include "selectionSort.hpp"
-#include "quickSort.hpp"
-#include "mergeSort.hpp"
-#include "insertionSort.hpp"
-#include "bubbleSort.hpp"
+#include "selectionSortMetrics.hpp"
+#include "quickSortMetrics.hpp"
+#include "mergeSortMetrics.hpp"
+#include "insertionSortMetrics.hpp"
+#include "bubbleSortMetrics.hpp"
+#include "qtdComparTroca.hpp"
 
 
 using namespace std;
@@ -95,29 +96,33 @@ void copiaVetor(vector<int> &a, vector<int> &b){
 }
 
 // Calcula o time das ordenações naturalmente iterativas
-void timeSortIter(function<void(vector<int> &, int)> func, vector<int> &v, int tamanho, string frase){
+void timeSortIter(function<ContaComparEtrocas(vector<int> &, int)> func, vector<int> &v, int tamanho, string frase){
     high_resolution_clock::time_point start;
     duration<double> duracao;
 
     start = high_resolution_clock::now();
 
-    func(v, tamanho);
+    ContaComparEtrocas contagem = func(v, tamanho);
 
     duracao = duration_cast<duration<double>>(high_resolution_clock::now() - start);
-    cout << "O " << frase << " demorou " << fixed << setprecision(10) << duracao.count() << endl;
+    cout << "O " << frase << " demorou: " << fixed << setprecision(10) << duracao.count() << " segundo(s), ";
+    cout << "fazendo " << contagem.qtdComparacoes << " comparações e ";
+    cout << contagem.qtdTrocas<< " trocas." << endl;
 }
 
 // Calcula o time das ordenações naturalmente recursivas
-void timeSortRec(function<void(vector<int> &, int, int)> func, vector<int> &v, int a, int b, string frase){
+void timeSortRec(function<ContaComparEtrocas(vector<int> &, int, int)> func, vector<int> &v, int a, int b, string frase){
     high_resolution_clock::time_point start;
     duration<double> duracao;
 
     start = high_resolution_clock::now();
 
-    func(v, a, b);
+    ContaComparEtrocas contagem = func(v, a, b);
 
     duracao = duration_cast<duration<double>>(high_resolution_clock::now() - start);
-    cout << "O " << frase << " demorou: " << fixed << setprecision(10) << duracao.count() << " segundo(s)." << endl;
+    cout << "O " << frase << " demorou: " << fixed << setprecision(10) << duracao.count() << " segundo(s), ";
+    cout << "fazendo " << contagem.qtdComparacoes << " comparações e ";
+    cout << contagem.qtdTrocas<< " trocas." << endl;
 }
 
 
@@ -140,19 +145,19 @@ int main (){
     escolheDistribuicaoDados(vetor, tipoDistribuicao, tamanho);
 
     copiaVetor(vetor, vetorAux);
-    timeSortIter(selectionSort, vetorAux, tamanho, "Selection Sort");
+    timeSortIter(selectionSortMetrics, vetorAux, tamanho, "Selection Sort");
 
     copiaVetor(vetor, vetorAux);
-    timeSortIter(insertionSort, vetorAux, tamanho, "Insertion Sort");
+    timeSortIter(insertionSortMetrics, vetorAux, tamanho, "Insertion Sort");
 
     copiaVetor(vetor, vetorAux);
-    timeSortIter(bubbleSort, vetorAux, tamanho, "Bubble Sort");
+    timeSortIter(bubbleSortMetrics, vetorAux, tamanho, "Bubble Sort");
 
     copiaVetor(vetor, vetorAux);
     timeSortRec(quickSort, vetorAux, 0, tamanho - 1, "Quick Sort");
 
     copiaVetor(vetor, vetorAux);
-    timeSortRec(mergeSort, vetorAux, 0, tamanho - 1, "Merge Sort");
+    timeSortRec(mergeSortMetrics, vetorAux, 0, tamanho - 1, "Merge Sort");
 
     return 0;
 }
