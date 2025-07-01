@@ -23,23 +23,23 @@ main.o: $(TEST)/main.cpp
 
 	$(CC) $(CPPFLAGS) -c $(TEST)/main.cpp
 
-selectionSort.o: $(INC)/selectionSort.hpp $(SRC)/selectionSort.cpp
+selectionSort.o: $(INC)/selectionSortMetrics.hpp $(SRC)/selectionSort.cpp
 
 	$(CC) $(CPPFLAGS) -c $(SRC)/selectionSort.cpp
 
-quickSort.o: $(INC)/quickSort.hpp $(SRC)/quickSort.cpp
+quickSort.o: $(INC)/quickSortMetrics.hpp $(SRC)/quickSort.cpp
 
 	$(CC) $(CPPFLAGS) -c $(SRC)/quickSort.cpp
 
-mergeSort.o: $(INC)/mergeSort.hpp $(SRC)/mergeSort.cpp
+mergeSort.o: $(INC)/mergeSortMetrics.hpp $(SRC)/mergeSort.cpp
 
 	$(CC) $(CPPFLAGS) -c $(SRC)/mergeSort.cpp
 
-insertionSort.o: $(INC)/insertionSort.hpp $(SRC)/insertionSort.cpp
+insertionSort.o: $(INC)/insertionSortMetrics.hpp $(SRC)/insertionSort.cpp
 
 	$(CC) $(CPPFLAGS) -c $(SRC)/insertionSort.cpp
 
-bubbleSort.o: $(INC)/bubbleSort.hpp $(SRC)/bubbleSort.cpp
+bubbleSort.o: $(INC)/bubbleSortMetrics.hpp $(SRC)/bubbleSort.cpp
 
 	$(CC) $(CPPFLAGS) -c $(SRC)/bubbleSort.cpp
 
