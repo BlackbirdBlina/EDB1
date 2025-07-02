@@ -85,7 +85,7 @@ int capturaVerificaValor(int a, string frase){
     return a;
 }
 
-void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho){
+void escolheDistribuicaoDados(vector<TipoAlvo> &v, int tipoDistribuicao, int tamanho){
     switch (tipoDistribuicao)
     {
 
@@ -93,7 +93,7 @@ void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho)
     case 1:
         srand(static_cast<unsigned int>(time(nullptr)));
         for (int i = 0; i < tamanho; i++){
-            v.push_back(rand());
+            v.push_back((TipoAlvo)rand());
         }
         break;
 
@@ -101,11 +101,11 @@ void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho)
     case 2:
         srand(static_cast<unsigned int>(time(nullptr)));
         for (int i = 0; i < tamanho; ++i){
-            v.push_back(i);
+            v.push_back((TipoAlvo)i);
         }
         for (int i = tamanho - 1; i > tamanho - (tamanho/10); --i){
             int j = rand() % tamanho;
-            int aux = v[i];
+            TipoAlvo aux = v[i];
             v[i] = v[j];
             v[j] = aux;
         }
@@ -114,7 +114,7 @@ void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho)
     // INVERSAMENTE ORDENADOS
     case 3:
         for (int i = 0; i < tamanho; ++i){
-            v.push_back(tamanho - i);
+            v.push_back((TipoAlvo)tamanho - i);
         }
         break;
 
@@ -123,7 +123,7 @@ void escolheDistribuicaoDados(vector<int> &v, int tipoDistribuicao, int tamanho)
     }
 }
 
-void copiaVetor(vector<int> &a, vector<int> &b){
+void copiaVetor(vector<TipoAlvo> &a, vector<TipoAlvo> &b){
     // Limpa o vetor para cada chamada da função
     b.clear();
     for (size_t i = 0; i < a.size(); i++){
@@ -133,7 +133,7 @@ void copiaVetor(vector<int> &a, vector<int> &b){
 }
 
 // Calcula o time das ordenações naturalmente iterativas
-void timeSortIter(function<ContaComparEtrocas(vector<int> &, int)> func, vector<int> &v, int tamanho, string frase){
+void timeSortIter(function<ContaComparEtrocas(vector<TipoAlvo> &, int)> func, vector<TipoAlvo> &v, int tamanho, string frase){
     high_resolution_clock::time_point start;
     duration<double> duracao;
 
@@ -148,7 +148,7 @@ void timeSortIter(function<ContaComparEtrocas(vector<int> &, int)> func, vector<
 }
 
 // Calcula o time das ordenações naturalmente recursivas
-void timeSortRec(function<ContaComparEtrocas(vector<int> &, int, int)> func, vector<int> &v, int a, int b, string frase){
+void timeSortRec(function<ContaComparEtrocas(vector<TipoAlvo> &, int, int)> func, vector<TipoAlvo> &v, int a, int b, string frase){
     high_resolution_clock::time_point start;
     duration<double> duracao;
 
@@ -167,8 +167,8 @@ int main (){
 
     int tamanho = 0;
     int tipoDistribuicao = 0;
-    vector<int> vetor;
-    vector<int> vetorAux;
+    vector<TipoAlvo> vetor;
+    vector<TipoAlvo> vetorAux;
 
     tamanho = validaTamanho(tamanho, "Digite um número inteiro para o tamanho do vetor: ");
     // O tipo Vector aloca memória dinamicamente - otimizado

@@ -3,7 +3,7 @@
 #include "qtdComparTroca.hpp"
 using namespace std;
 
-ContaComparEtrocas selectionSortMetrics(vector<int> &v, int tamanho){
+ContaComparEtrocas selectionSortMetrics(vector<TipoAlvo> &v, int tamanho){
     ContaComparEtrocas contagem;
     contagem.qtdComparacoes = 0;
     contagem.qtdTrocas = 0;
@@ -17,10 +17,10 @@ ContaComparEtrocas selectionSortMetrics(vector<int> &v, int tamanho){
                 min = j;
             }
         }
-        int x = v[i];
+        TipoAlvo aux = v[i];
         v[i] = v[min];
         ++contagem.qtdTrocas;
-        v[min] = x;
+        v[min] = aux;
         ++contagem.qtdTrocas;
     }
     return contagem;

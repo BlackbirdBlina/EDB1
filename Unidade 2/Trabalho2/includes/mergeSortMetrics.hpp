@@ -4,8 +4,8 @@
 #include "qtdComparTroca.hpp"
 using namespace std;
 
-ContaComparEtrocas merge(vector<int> &v, int inicioV1, int inicioV2, int finalV2);
+ContaComparEtrocas merge(vector<TipoAlvo> &v, int inicioV1, int inicioV2, int finalV2);
 
-ContaComparEtrocas mergeSortMetrics(vector<int> &v, int left, int right);
+ContaComparEtrocas mergeSortMetrics(vector<TipoAlvo> &v, int left, int right);
 
 #endif

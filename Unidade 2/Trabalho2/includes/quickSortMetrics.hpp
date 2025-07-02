@@ -9,11 +9,11 @@ using namespace std;
 static random_device rd;
 static minstd_rand engine(rd());
 
-int pivoRandom(vector<int> &v, int inicio, int final);
+int pivoRandom(vector<TipoAlvo> &v, int inicio, int final);
 
-int quickDivid(vector<int> &v, int indiceFirstElemento, int IndiceLastElemento, ContaComparEtrocas &contagem);
+int quickDivid(vector<TipoAlvo> &v, int indiceFirstElemento, int IndiceLastElemento, ContaComparEtrocas &contagem);
 
-ContaComparEtrocas quickSortMetrics(vector<int> &v, int indiceFirstElemento, int indiceLastElemento);
+ContaComparEtrocas quickSortMetrics(vector<TipoAlvo> &v, int indiceFirstElemento, int indiceLastElemento);
 
 
 #endif

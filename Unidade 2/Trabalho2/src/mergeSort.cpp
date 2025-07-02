@@ -3,7 +3,7 @@
 #include "qtdComparTroca.hpp"
 using namespace std;
 
-ContaComparEtrocas merge(vector<int> &v, int inicioV1, int inicioV2, int finalV2){
+ContaComparEtrocas merge(vector<TipoAlvo> &v, int inicioV1, int inicioV2, int finalV2){
     ContaComparEtrocas contagem;
     contagem.qtdComparacoes = 0;
     contagem.qtdTrocas = 0;
@@ -13,7 +13,7 @@ ContaComparEtrocas merge(vector<int> &v, int inicioV1, int inicioV2, int finalV2
     int start1 = inicioV1;
     int control = 0;
     int tempSize = finalV2 - inicioV1 + 1;
-    vector<int> temp(tempSize);
+    vector<TipoAlvo> temp(tempSize);
 
     while (inicioV1 <= finalV1 && inicioV2 <= finalV2){
         // Caso queira ordenar de forma decrescente altere a condição do if para ">="
@@ -53,7 +53,7 @@ ContaComparEtrocas merge(vector<int> &v, int inicioV1, int inicioV2, int finalV2
     return contagem;
 }
 
-ContaComparEtrocas mergeSortMetrics(vector<int> &v, int left, int right){
+ContaComparEtrocas mergeSortMetrics(vector<TipoAlvo> &v, int left, int right){
     ContaComparEtrocas contagem;
     contagem.qtdComparacoes = 0;
     contagem.qtdTrocas = 0;

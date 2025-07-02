@@ -6,17 +6,17 @@
 using namespace std;
 
 
-int pivoRandom(vector<int> &v, int inicio, int final){
-    uniform_int_distribution<int> dist(inicio, final);
+int pivoRandom(vector<TipoAlvo> &v, int inicio, int final){
+    uniform_int_distribution<TipoAlvo> dist(inicio, final);
     int random_number = dist(engine);
 
     return random_number;
 }
 
 // Parâmetro de saída para capturar informações por referência, evitando a criação de novas structs
-int quickDivid(vector<int> &v, int indiceFirstElemento, int indiceLastElemento, ContaComparEtrocas &contagem){
+int quickDivid(vector<TipoAlvo> &v, int indiceFirstElemento, int indiceLastElemento, ContaComparEtrocas &contagem){
     int indicePivo = pivoRandom(v, indiceFirstElemento, indiceLastElemento);
-    int aux = v[indicePivo];
+    TipoAlvo aux = v[indicePivo];
     ++contagem.qtdTrocas;
     v[indicePivo] = v[indiceLastElemento];
     ++contagem.qtdTrocas;
@@ -39,7 +39,7 @@ int quickDivid(vector<int> &v, int indiceFirstElemento, int indiceLastElemento, 
         }
         ++contagem.qtdComparacoes;
         if (indiceDec >= indiceInc){
-            int aux = v[indiceInc];
+            TipoAlvo aux = v[indiceInc];
             ++contagem.qtdTrocas;
             v[indiceInc] = v[indiceDec];
             ++contagem.qtdTrocas;
@@ -58,7 +58,7 @@ int quickDivid(vector<int> &v, int indiceFirstElemento, int indiceLastElemento, 
     return indiceInc;
 }
 
-ContaComparEtrocas quickSortMetrics(vector<int> &v, int indiceFirstElemento, int indiceLastElemento){
+ContaComparEtrocas quickSortMetrics(vector<TipoAlvo> &v, int indiceFirstElemento, int indiceLastElemento){
     ContaComparEtrocas contagem;
     contagem.qtdComparacoes = 0;
     contagem.qtdTrocas = 0;

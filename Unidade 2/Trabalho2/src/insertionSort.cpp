@@ -3,13 +3,13 @@
 #include "qtdComparTroca.hpp"
 using namespace std;
 
-ContaComparEtrocas insertionSortMetrics(vector<int> &v, int tamanho){
+ContaComparEtrocas insertionSortMetrics(vector<TipoAlvo> &v, int tamanho){
     ContaComparEtrocas contagem;
     contagem.qtdComparacoes = 0;
     contagem.qtdTrocas = 0;
 
     for (int elemento_n_ordenado = 1; elemento_n_ordenado < tamanho; ++elemento_n_ordenado){
-        int aux = v[elemento_n_ordenado];
+        TipoAlvo aux = v[elemento_n_ordenado];
         int elemento_ordenado = elemento_n_ordenado - 1;
 
         // Caso queira ordenar de forma decrescente modifique o operador da segunda condição do while para "<"

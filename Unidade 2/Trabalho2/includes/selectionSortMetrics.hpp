@@ -4,7 +4,7 @@
 #include "qtdComparTroca.hpp"
 using namespace std;
 
-ContaComparEtrocas selectionSortMetrics(vector<int> &v, int tamanho);
+ContaComparEtrocas selectionSortMetrics(vector<TipoAlvo> &v, int tamanho);
 
 
 #endif

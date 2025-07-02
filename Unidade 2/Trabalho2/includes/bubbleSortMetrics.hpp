@@ -4,6 +4,6 @@
 #include "qtdComparTroca.hpp"
 using namespace std;
 
-ContaComparEtrocas bubbleSortMetrics(vector<int> &v, int tamanho);
+ContaComparEtrocas bubbleSortMetrics(vector<TipoAlvo> &v, int tamanho);
 
 #endif

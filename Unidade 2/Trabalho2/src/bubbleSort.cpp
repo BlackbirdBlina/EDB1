@@ -4,7 +4,7 @@
 using namespace std;
 
 
-ContaComparEtrocas bubbleSortMetrics(vector<int> &v, int tamanho){
+ContaComparEtrocas bubbleSortMetrics(vector<TipoAlvo> &v, int tamanho){
     ContaComparEtrocas contagem;
     contagem.qtdComparacoes = 0;
     contagem.qtdTrocas = 0;
@@ -16,7 +16,7 @@ ContaComparEtrocas bubbleSortMetrics(vector<int> &v, int tamanho){
             ++contagem.qtdComparacoes;
             // Caso queira ordenar decrescente ajuste a condição abaixo para "<"
             if (v[j] > v[j + 1]) {
-                int aux = v[j + 1];
+                TipoAlvo aux = v[j + 1];
                 v[j + 1] = v[j];
                 ++contagem.qtdTrocas;
                 v[j] = aux;
