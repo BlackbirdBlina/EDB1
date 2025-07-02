@@ -4,6 +4,7 @@
 #include <chrono>
 #include <iomanip>
 #include <functional>
+#include <algorithm>
 
 #include "selectionSortMetrics.hpp"
 #include "quickSortMetrics.hpp"
@@ -11,7 +12,6 @@
 #include "insertionSortMetrics.hpp"
 #include "bubbleSortMetrics.hpp"
 #include "qtdComparTroca.hpp"
-
 
 using namespace std;
 using namespace std::chrono;
@@ -193,6 +193,20 @@ int main (){
 
     copiaVetor(vetor, vetorAux);
     timeSortRec(mergeSortMetrics, vetorAux, 0, tamanho - 1, "Merge Sort");
+
+    copiaVetor(vetor, vetorAux);
+
+    // Extra - adicionando medição de tempo do algoritmo de ordenação padrão do C++
+    high_resolution_clock::time_point start;
+    duration<double> duracao;
+
+    start = high_resolution_clock::now();
+
+    std::sort(vetorAux.begin(), vetorAux.end());
+
+    duracao = duration_cast<duration<double>>(high_resolution_clock::now() - start);
+    cout << "O sort STL demorou: " << fixed << setprecision(10) << duracao.count() << " segundo(s)" << endl;
+
 
     return 0;
 }
