@@ -1,0 +1,31 @@
+Início:
+v = {7, 3, 1, 4, 0}
+
+v = {3, 7, 1, 4, 0}
+
+v = {3, 1, 7, 4, 0}
+
+v = {3, 1, 4, 7, 0}
+
+v = {3, 1, 4, 0, 7}
+
+Reiniciando:
+v = {1, 3, 4, 0, 7}
+
+v = {1, 3, 4, 0, 7} - Não precisou mudar, segue para a próxima comparação
+
+v = {1, 3, 0, 4, 7}
+
+v = {1, 3, 0, 4, 7} - Não precisou mudar, segue para a próxima comparação
+
+Reiniciando:
+v = {1, 3, 0, 4, 7} - Não precisou mudar, segue para a próxima comparação
+
+v = {1, 0, 3, 4, 7} 
+
+v = {1, 0, 3, 4, 7} - Não precisou mudar, segue para a próxima comparação
+
+v = {1, 0, 3, 4, 7} - Não precisou mudar, segue para a próxima comparação
+
+Reiniciando:
+v = {0, 1, 3, 4, 7} - ordenou, porém se não colocar otimização, ele ainda verifica todas as outras posições
