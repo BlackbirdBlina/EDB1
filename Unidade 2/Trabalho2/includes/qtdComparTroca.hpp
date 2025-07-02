@@ -8,8 +8,9 @@ typedef int TipoAlvo;
 
 // Capturar e retorna um conjunto de informações
 struct ContaComparEtrocas{
-    int qtdComparacoes;
-    int qtdTrocas;
+    // Tipo usado para "adiar" overflow nas contagens feitas
+    unsigned long long int qtdComparacoes;
+    unsigned long long int qtdTrocas;
 };
 
 #endif
