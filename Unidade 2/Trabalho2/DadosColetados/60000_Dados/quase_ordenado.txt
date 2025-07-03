@@ -1,0 +1,8 @@
+Digite um número inteiro para o tamanho do vetor: 
+Para escolher o tipo de dados gerados, escolha: 1 para ALEATÓRIO; 2 para QUASE ORDENADOS; 3 para INVERSAMENTE ORDENADOS.
+O Selection Sort demorou: 1.1820866110 segundo(s), fazendo 1799970000 comparações e 119998 trocas.
+O Insertion Sort demorou: 0.1779174950 segundo(s), fazendo 293147252 comparações e 293147252 trocas.
+O Bubble Sort demorou: 2.1595832190 segundo(s), fazendo 1799950299 comparações e 586174506 trocas.
+O Quick Sort demorou: 0.0037068770 segundo(s), fazendo 1200316 comparações e 336321 trocas.
+O Merge Sort demorou: 0.0038972910 segundo(s), fazendo 853400 comparações e 1908928 trocas.
+O sort STL demorou: 0.0013654280 segundo(s)

@@ -144,7 +144,7 @@ void timeSortIter(function<ContaComparEtrocas(vector<TipoAlvo> &, int)> func, ve
     duracao = duration_cast<duration<double>>(high_resolution_clock::now() - start);
     cout << "O " << frase << " demorou: " << fixed << setprecision(10) << duracao.count() << " segundo(s), ";
     cout << "fazendo " << contagem.qtdComparacoes << " comparações e ";
-    cout << contagem.qtdTrocas<< " trocas." << endl;
+    cout << contagem.qtdTrocas << " trocas." << endl;
 }
 
 // Calcula o time das ordenações naturalmente recursivas
@@ -159,7 +159,7 @@ void timeSortRec(function<ContaComparEtrocas(vector<TipoAlvo> &, int, int)> func
     duracao = duration_cast<duration<double>>(high_resolution_clock::now() - start);
     cout << "O " << frase << " demorou: " << fixed << setprecision(10) << duracao.count() << " segundo(s), ";
     cout << "fazendo " << contagem.qtdComparacoes << " comparações e ";
-    cout << contagem.qtdTrocas<< " trocas." << endl;
+    cout << contagem.qtdTrocas << " trocas." << endl;
 }
 
 
