@@ -16,7 +16,7 @@ ContaComparEtrocas insertionSortMetrics(vector<TipoAlvo> &v, int tamanho){
         while (elemento_ordenado >= 0 && v[elemento_ordenado] > aux){
             ++contagem.qtdComparacoes;
             v[elemento_ordenado + 1] = v[elemento_ordenado];
-            // Considerando "mover dados" como trocas
+            // Extra - Considerando "mover dados" como trocas
             ++contagem.qtdTrocas;
             elemento_ordenado -= 1;
         }
