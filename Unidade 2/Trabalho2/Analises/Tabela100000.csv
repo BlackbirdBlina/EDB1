@@ -1,0 +1,19 @@
+,Algoritmo,Tamanho,Distribuição,tempo,comparações,trocas
+180,Selection Sort,100000,aleatorio,3.336001137,4999950000,199998
+181,Insertion Sort,100000,aleatorio,1.561531467,2503406851,2503406851
+182,Bubble Sort,100000,aleatorio,16.68615349,4999839315,5006613704
+183,Quick Sort,100000,aleatorio,0.008567445,2090118,1375917
+184,Merge Sort,100000,aleatorio,0.011555315,1536350,3337856
+185,STL (Standard Library),100000,aleatorio,0.009339605,0,0
+186,Selection Sort,100000,quase_ordenado,3.260400439,4999950000,199998
+187,Insertion Sort,100000,quase_ordenado,0.507961869,819825560,819825560
+188,Bubble Sort,100000,quase_ordenado,7.149911749,4999729884,1639451122
+189,Quick Sort,100000,quase_ordenado,0.005171424,2051985,570432
+190,Merge Sort,100000,quase_ordenado,0.006331528,1502507,3337856
+191,STL (Standard Library),100000,quase_ordenado,0.002161534,0,0
+192,Selection Sort,100000,inversamente_ordenados,2.876940171,4999950000,199998
+193,Insertion Sort,100000,inversamente_ordenados,3.113395736,5000049999,5000049999
+194,Bubble Sort,100000,inversamente_ordenados,10.708184358,4999950000,9999900000
+195,Quick Sort,100000,inversamente_ordenados,0.004429562,2175204,550122
+196,Merge Sort,100000,inversamente_ordenados,0.004864416,815024,3337856
+197,STL (Standard Library),100000,inversamente_ordenados,0.000872192,0,0
