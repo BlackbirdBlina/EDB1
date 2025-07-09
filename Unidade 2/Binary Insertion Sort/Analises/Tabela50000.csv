@@ -1,0 +1,3 @@
+,Algoritmo,Tamanho,Distribuição,tempo,comparações,trocas
+10,Binary Insertion Sort,50000,inversamente_ordenados,0.5025657410,784464,1250024999
+11,Insertion Sort,50000,inversamente_ordenados,0.8388285710,1250024999,1250024999
