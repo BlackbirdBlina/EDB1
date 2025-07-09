@@ -1,0 +1,23 @@
+,tempo,comparações,trocas,Algoritmo,Tamanho,Distribuição
+0,0.0002113750,9976,500499,Binary Insertion Sort,1000,inversamente_ordenados
+1,0.0003681360,500499,500499,Insertion Sort,1000,inversamente_ordenados
+2,0.0193229050,133616,50004999,Binary Insertion Sort,10000,inversamente_ordenados
+3,0.0315542940,50004999,50004999,Insertion Sort,10000,inversamente_ordenados
+4,0.0827447430,287232,200009999,Binary Insertion Sort,20000,inversamente_ordenados
+5,0.1254436830,200009999,200009999,Insertion Sort,20000,inversamente_ordenados
+6,0.1843243540,447232,450014999,Binary Insertion Sort,30000,inversamente_ordenados
+7,0.2838047910,450014999,450014999,Insertion Sort,30000,inversamente_ordenados
+8,0.3376335490,614464,800019999,Binary Insertion Sort,40000,inversamente_ordenados
+9,0.5489894940,800019999,800019999,Insertion Sort,40000,inversamente_ordenados
+10,0.5025657410,784464,1250024999,Binary Insertion Sort,50000,inversamente_ordenados
+11,0.8388285710,1250024999,1250024999,Insertion Sort,50000,inversamente_ordenados
+12,0.7455822280,954464,1800029999,Binary Insertion Sort,60000,inversamente_ordenados
+13,1.2687485690,1800029999,1800029999,Insertion Sort,60000,inversamente_ordenados
+14,1.1520508050,1128928,2450034999,Binary Insertion Sort,70000,inversamente_ordenados
+15,1.8924630440,2450034999,2450034999,Insertion Sort,70000,inversamente_ordenados
+16,2.1105069110,1308928,3200039999,Binary Insertion Sort,80000,inversamente_ordenados
+17,3.3522348470,3200039999,3200039999,Insertion Sort,80000,inversamente_ordenados
+18,3.2026801150,1488928,4050044999,Binary Insertion Sort,90000,inversamente_ordenados
+19,4.7248536460,4050044999,4050044999,Insertion Sort,90000,inversamente_ordenados
+20,3.4398847930,1668928,5000049999,Binary Insertion Sort,100000,inversamente_ordenados
+21,4.7442877130,5000049999,5000049999,Insertion Sort,100000,inversamente_ordenados

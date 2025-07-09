@@ -1,0 +1,4 @@
+Digite um número inteiro para o tamanho do vetor: 
+Para escolher o tipo de dados gerados, escolha: 1 para ALEATÓRIO; 2 para QUASE ORDENADOS; 3 para INVERSAMENTE ORDENADOS.
+O Binary Insertion Sort demorou: 0.0827447430 segundo(s), fazendo 287232 comparações e 200009999 trocas.
+O Insertion Sort demorou: 0.1254436830 segundo(s), fazendo 200009999 comparações e 200009999 trocas.
